@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function NavMenu() {
     return (
-        <header className="border-b border-accent">
+        <header className="border-b border-muted-foreground">
             <nav className="gap-1 w-full max-w-content-width mx-auto px-2 sm:px-4 h-16 flex justify-between items-center">
                 <Logo />
                 <div className="flex gap-1 items-center">
