@@ -2,7 +2,7 @@
 import { useEffect } from "react"
 import { store } from "./store"
 import { Provider } from "react-redux"
-import { addFavorite, setFavorites } from "./features/favorites-slice"
+import { setFavorites } from "./features/favorites-slice"
 
 export function ReduxProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
