@@ -4,7 +4,7 @@ export default function Footer() {
             <div>
                 <span className="whitespace-nowrap">&copy; Movie Database {new Date().getFullYear()}</span>
                 {' '}
-                <span className="whitespace-nowrap">| Data provided by <a className="hover:text-secondary" href="http://www.omdbapi.com/">OMDb API</a></span>
+                <span className="whitespace-nowrap">| Data provided by <a className="hover:text-primary" href="http://www.omdbapi.com/">OMDb API</a></span>
             </div>
         </footer>
     );

@@ -22,6 +22,7 @@ export default function FavoriteButton({ movie, className = "" }: { movie: Movie
                         variant="destructive"
                         size="icon"
                         onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                            // instead of stoppropagation for next.js
                             e.preventDefault();
                             dispatch(removeFavorite(movie.imdbID))
                         }}
