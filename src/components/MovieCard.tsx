@@ -1,5 +1,5 @@
 import FavoriteButton from "@/app/movie/[id]/FavoriteButton";
-import { Movie } from "@/redux/features/search-slice";
+import { Movie } from "@/redux/features/SearchSlice";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "./ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { AppDispatch, RootState } from "@/redux/store";
-import { searchWithPageChange } from "@/redux/features/search-slice";
+import { searchWithPageChange } from "@/redux/features/SearchSlice";
 
 
 export default function Pagination() {

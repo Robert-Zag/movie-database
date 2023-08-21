@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FavoriteButton from "./FavoriteButton";
-import { Movie } from "@/redux/features/search-slice";
+import { Movie } from "@/redux/features/SearchSlice";
 
 type Rating = {
     Source: string;

@@ -2,10 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-import { Movie } from "@/redux/features/search-slice";
+import { Movie } from "@/redux/features/SearchSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux/store";
-import { addFavorite, removeFavorite } from "@/redux/features/favorites-slice";
+import { addFavorite, removeFavorite } from "@/redux/features/FavoritesSlice";
 
 
 export default function FavoriteButton({ movie, className = "" }: { movie: Movie, className?: string }) {
