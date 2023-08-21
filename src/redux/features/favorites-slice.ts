@@ -6,7 +6,7 @@ type FavoritesState = {
 }
 
 const initialState: FavoritesState = {
-    favorites: JSON.parse(localStorage.getItem("favorites") || "[]"),
+    favorites: []
 }
 
 export const favoritesSlice = createSlice({
@@ -21,8 +21,11 @@ export const favoritesSlice = createSlice({
             state.favorites = state.favorites.filter(movie => movie.imdbID !== action.payload);
             localStorage.setItem("favorites", JSON.stringify(state.favorites));
         },
+        setFavorites: (state, action: PayloadAction<Movie[]>) => {
+            state.favorites = action.payload;
+        },
     }
 })
 
-export const { addFavorite, removeFavorite } = favoritesSlice.actions
+export const { setFavorites, addFavorite, removeFavorite } = favoritesSlice.actions
 export default favoritesSlice.reducer;
