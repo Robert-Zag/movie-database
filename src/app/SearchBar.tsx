@@ -25,21 +25,6 @@ export default function SearchBar() {
         dispatch(setSearchQuery(searchInput))
         dispatch(setPage(1))
         dispatch(searchWithPageChange(0))
-        // const fetchData = async () => {
-        //     const url = 'http://omdbapi.com/?' + new URLSearchParams({
-        //         apikey: "19478d6e",
-        //         s: searchInput,
-        //         page: '1',
-        //     })
-        //     const response = await fetch(url);
-        //     const data = await response.json()
-        //     if (data.Search) {
-        //         dispatch(setSearchResults(data.Search))
-        //     } else {
-        //         dispatch(setSearchResults([]))
-        //     }
-        // }
-        // fetchData();
         router.push("/")
     }
     return (
