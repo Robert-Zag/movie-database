@@ -8,6 +8,8 @@ type Rating = {
 };
 
 export type MovieDetail = {
+    Response: string;
+    Error?: string;
     Title: string;
     Year: string;
     Rated: string;
@@ -32,27 +34,25 @@ export type MovieDetail = {
     BoxOffice: string;
     Production: string;
     Website: string;
-    Response: string;
-    Error?: string;
 };
 
-
 export default async function page({ params }: { params: { id: string } }) {
+    // accessing the api key environment variable in a server component
     const url = 'http://omdbapi.com/?' + new URLSearchParams({
         apikey: process.env.OMDB_API_KEY as string,
         i: params.id,
     })
     const response = await fetch(url);
     const movie: MovieDetail = await response.json()
-    // basic movie object with less detail, used for the favorites state array
-    const basicMovie: Movie = {
-        imdbID: movie.imdbID,
-        Title: movie.Title,
-        Year: movie.Year,
-        Type: movie.Type,
-        Poster: movie.Poster,
-    }
     if (movie.Response === "True") {
+        // basic movie object with less detail, used for the favorites state array
+        const basicMovie: Movie = {
+            imdbID: movie.imdbID,
+            Title: movie.Title,
+            Year: movie.Year,
+            Type: movie.Type,
+            Poster: movie.Poster,
+        }
         return (
             <div className="flex flex-col md:flex-row gap-4 my-4">
                 <div className="min-w-[300px]">
