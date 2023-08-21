@@ -3,9 +3,9 @@
 import Pagination from '@/components/Pagination'
 import { RootState } from '@/redux/store'
 import { useSelector } from 'react-redux'
-// import MovieCard from '@/components/MovieCard'
-import dynamic from 'next/dynamic'
-const MovieCard = dynamic(() => import('@/components/MovieCard'));
+import MovieCard from '@/components/MovieCard'
+// import dynamic from 'next/dynamic'
+// const MovieCard = dynamic(() => import('@/components/MovieCard'));
 
 export default function Home() {
   const searchQuery = useSelector((state: RootState) => state.search.searchQuery)

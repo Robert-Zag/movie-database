@@ -2,9 +2,10 @@
 
 import { RootState } from '@/redux/store'
 import { useSelector } from 'react-redux'
-// import MovieCard from '@/components/MovieCard'
-import dynamic from 'next/dynamic'
-const MovieCard = dynamic(() => import('@/components/MovieCard'));
+import MovieCard from '@/components/MovieCard'
+// code splitting introduces delay
+// import dynamic from 'next/dynamic'
+// const MovieCard = dynamic(() => import('@/components/MovieCard'));
 
 export default function Home() {
     const favoriteMovies = useSelector((state: RootState) => state.favorites.favorites)
