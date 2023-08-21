@@ -9,7 +9,7 @@ import {
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { setPage, setSearchQuery, setSearchResults } from "@/redux/features/search-slice";
+import { searchWithPageChange, setPage, setSearchQuery, setSearchResults } from "@/redux/features/search-slice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import { useRouter } from "next/navigation";
@@ -24,6 +24,22 @@ export default function SearchBar() {
         e.preventDefault()
         dispatch(setSearchQuery(searchInput))
         dispatch(setPage(1))
+        dispatch(searchWithPageChange(0))
+        // const fetchData = async () => {
+        //     const url = 'http://omdbapi.com/?' + new URLSearchParams({
+        //         apikey: "19478d6e",
+        //         s: searchInput,
+        //         page: '1',
+        //     })
+        //     const response = await fetch(url);
+        //     const data = await response.json()
+        //     if (data.Search) {
+        //         dispatch(setSearchResults(data.Search))
+        //     } else {
+        //         dispatch(setSearchResults([]))
+        //     }
+        // }
+        // fetchData();
         router.push("/")
     }
     return (
