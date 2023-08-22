@@ -9,7 +9,7 @@ import {
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { searchWithPageChange, setPage, setSearchQuery, setSearchResults } from "@/redux/features/SearchSlice";
+import { searchWithPageChange, setPage, setSearchQuery } from "@/redux/features/SearchSlice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import { useRouter } from "next/navigation";
